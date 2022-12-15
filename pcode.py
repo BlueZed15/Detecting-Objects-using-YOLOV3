@@ -45,4 +45,5 @@ while True:
     cv2.imshow('og',ima)
     if cv2.waitKey(1)==ord('q'):
         break
+cv2.VideoCapture.release(vd)
 cv2.destroyAllWindows()
