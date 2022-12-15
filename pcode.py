@@ -3,7 +3,6 @@ import cv2, numpy as ny
 def eva(bprev,bnext):
     return [(bprev[0]+bnext[0])/2,(bprev[1]+bnext[1])/2,(bprev[2]+bnext[2])/2,(bprev[3]+bnext[3])/2]
 
-
 vd = cv2.VideoCapture(r"C:\Users\Rohith\Downloads\production ID_4644508 (2) .mp4")
 ob=cv2.dnn.readNet('yolov3-tiny.cfg','yolov3-tiny.weights')
 while True:
@@ -32,7 +31,6 @@ while True:
                 bound.append([x,y,int(wi),int(hi)])
                 
     indices = cv2.dnn.NMSBoxes(bound, confis, 0.25, 0.1)
-    print(indices,'....',bound)
     if len(indices) > 0:
         for i in range(len(indices)):
             if bound[indices[i]]==[]:
