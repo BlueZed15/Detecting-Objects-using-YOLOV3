@@ -1,2 +1,2 @@
 # Detecting-Objects-using-YOLOV3
-I have used imported YOLOV3 model on OPENCV to detect objects from a dashcam footage of a car.
+I have used python to import YOLOV3 model and OPENCV framework to detect objects from a dashcam footage of a car.
